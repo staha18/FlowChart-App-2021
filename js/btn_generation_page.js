@@ -1,25 +1,21 @@
 let btn_load_file = document.getElementById('load-btn')
-let input_btn = document.getElementById('file-input')
+let input_btn = document.getElementById('input__file')
 
 btn_load_file.addEventListener('click', function () {
     input_btn.click()
 })
 
-
 let rec = document.getElementById('btn-rec')
-
 rec.addEventListener('click', function () {
     Add(1)
 })
 
 let ellipse = document.getElementById('btn-ellip')
-
 ellipse.addEventListener('click', function () {
     Add(2)
 })
 
 let hex = document.getElementById('btn-hex')
-
 hex.addEventListener('click', function () {
     Add(3)
 })
@@ -47,12 +43,11 @@ arrow.addEventListener('click', function () {
 function onFileSelected(event) {
     var selectedFile = event.target.files[0];
     var reader = new FileReader();
-
     var result = document.getElementById('editor');
 
     reader.onload = function (e) {
         result.innerHTML = e.target.result;
     };
-
     reader.readAsText(selectedFile);
 }
+

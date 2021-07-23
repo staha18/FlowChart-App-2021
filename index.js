@@ -3,17 +3,19 @@ const url = require('url');
 const { app, BrowserWindow } = require('electron');
 const { ppid } = require('process');
 
+
 function createWindow() {
     const win = new BrowserWindow({
         width: 600,
         height: 800,
         fullscreen: true,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            contextIsolation:false
         }
     });
 
-    win.loadFile('index.html');
+    win.loadFile('index-main.html');
 };
 
 app.whenReady().then(createWindow);
@@ -29,3 +31,6 @@ app.on('activate', () => {
         createWindow();
     }
 });
+
+
+
