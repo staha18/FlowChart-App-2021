@@ -8,7 +8,16 @@ var fun = function () {
     });
   }
 
-let gen_process = document.getElementById('btn-gen')
+const gen_process = document.getElementById('btn-gen')
     gen_process.addEventListener('click', function() {
-    fun()
+    fun();
+    document.querySelector('.btn-one').style.zIndex = "1";
 })
+
+const onFileSelected = () => {
+  swapIndex();
+}
+
+const swapIndex = () => {
+  document.querySelector('.btn-one').style.zIndex = "-2";
+}

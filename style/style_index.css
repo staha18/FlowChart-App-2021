@@ -23,7 +23,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .load {
   width: 300px;
   height: 100px;
@@ -46,14 +45,27 @@ body {
   text-shadow: 0px 4px 0px #b7b7b7;
 }
 
-.button {
+.move-btn {
+  width: 500px;
+  height: 150px;
+}
+
+.btn-one,
+.btn-two {
   width: 500px;
   height: 100px;
-  position: relative;
-  margin: 15px 0;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-one {
+  z-index: 1;
+}
+
+.btn-two {
+  z-index: 0;
 }
 
 .input__file {
@@ -65,15 +77,21 @@ body {
 .text-load {
   color: #bcd4df;
   font-family: "Rubik Mono One", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
+}
+
+.text-gen {
+  color: #bcd4df;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 20px;
 }
 
 .input__file-button {
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 50px;
   border-radius: 50px;
   background-color: #38369a;
-  color: #fff;
+  color: #bcd4df;
   font-size: 1.125rem;
   font-weight: 700;
   display: flex;
@@ -82,48 +100,17 @@ body {
   box-shadow: 0px 4px 0px 0px rgba(10, 14, 113, 1);
 }
 
-.flip-container {
-  perspective: 1000px;
-}
-/* flip the pane when hovered */
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-container,
-.front,
-.back {
-  width: 320px;
-  height: 480px;
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.front,
-.back {
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
+.gen_process {
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background-color: #38369a;
+  color: #bcd4df;
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 0px 0px rgba(10, 14, 113, 1);
 }
