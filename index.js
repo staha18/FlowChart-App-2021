@@ -6,9 +6,9 @@ const { ppid } = require('process');
 
 function createWindow() {
     const win = new BrowserWindow({
-        width: 600,
+        width: 1280,
         height: 800,
-        fullscreen: true,
+        icon: 'C:/Users/pesch/Desktop/FlowChart-App/img/flow-icon.ico',
         webPreferences: {
             nodeIntegration: true,
             contextIsolation:false
@@ -16,6 +16,7 @@ function createWindow() {
     });
 
     win.loadFile('index-main.html');
+     win.maximize;
 };
 
 app.whenReady().then(createWindow);

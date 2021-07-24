@@ -40,14 +40,3 @@ arrow.addEventListener('click', function () {
     Add(7)
 })
 
-function onFileSelected(event) {
-    var selectedFile = event.target.files[0];
-    var reader = new FileReader();
-    var result = document.getElementById('editor');
-
-    reader.onload = function (e) {
-        result.innerHTML = e.target.result;
-    };
-    reader.readAsText(selectedFile);
-}
-

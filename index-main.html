@@ -6,7 +6,6 @@
   <title>FlowChart Creator</title>
   <link rel="stylesheet" href="style/style_index.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-  <link rel="import" href="generation.html">
 </head>
 
 <body>
@@ -16,9 +15,9 @@
     </div>
     <div class="move-btn">
       <div class="btn-one">
-        <label for="input__file" class="input__file-button">
-          <input id="input__file" class="input__file" type="file" name="file" accept=".c, .cpp"
-            onchange="onFileSelected()" multiple>
+        <label for="input__file" id="input__file-button">
+          <input id="input__file" class="input__file" type="file" name="file" onchange="onFileSelected(event)"
+            accept=".c, .cpp" multiple>
           <span class="text-load">Load file</span>
         </label>
       </div>
@@ -29,6 +28,7 @@
       </div>
     </div>
   </main>
+  <script src="js/FileSaver.js"></script>
   <script src="js/render.js"></script>
 </body>
 
