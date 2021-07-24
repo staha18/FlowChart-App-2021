@@ -1,0 +1,65 @@
+//#include <iostream>
+//#include <clocale>
+//#include <cstdlib>
+//#include <map>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    system("chcp 1251");
+//
+//    string a = "�������_�_��_���_����_�������!_������_��_������_������,_��������_��_�_��������_�������._��,_����_����_�_����_�����,_��_��,_���_��������_�����:_��������_-_��_��!";
+//    cout << "count of letters in string: " << a.size() << endl;
+//    cout << "--------------------------------------------------------------" << endl;
+//    map <char, long long> res;
+//    map <string, long long> res2;
+//    map <string, long long> res3;
+//
+//
+//    for (int i = 0; i < a.size(); i++)
+//    {
+//        res[a[i]]++;
+//    }
+//
+//    string flag;
+//    flag.push_back('�');
+//    flag.push_back('�');
+//
+//    for (int i = 0; i < a.size() - 1; i++)
+//    {
+//        flag[0] = a[i];
+//        flag[1] = a[i + 1];
+//        res2[flag]++;
+//    }
+//
+//    flag.push_back('�');
+//
+//    for (int i = 0; i < a.size() - 2; i++)
+//    {
+//        flag[0] = a[i];
+//        flag[1] = a[i + 1];
+//        flag[2] = a[i + 2];
+//        res3[flag]++;
+//    }
+//
+//
+//    for (auto it = res.begin(); it != res.end(); it++)
+//    {
+//        cout << it->first << " " << it->second << endl;
+//    }
+//    cout << "count of unique letters: " << res.size() << endl;
+//    cout << "--------------------------------------------------------------" << endl;
+//    for (auto it = res2.begin(); it != res2.end(); it++)
+//    {
+//        cout << it->first << " " << it->second << endl;
+//    }
+//    cout << "count of unique double: " << res2.size() << endl;
+//    cout << "--------------------------------------------------------------" << endl;
+//    for (auto it = res3.begin(); it != res3.end(); it++)
+//    {
+//        cout << it->first << " " << it->second << endl;
+//    }
+//    cout << "count of unique triple: " << res3.size() << endl;
+//    cout << "--------------------------------------------------------------" << endl;
+//}

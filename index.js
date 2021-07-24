@@ -3,7 +3,6 @@ const url = require('url');
 const { app, BrowserWindow } = require('electron');
 const { ppid } = require('process');
 
-
 function createWindow() {
     const win = new BrowserWindow({
         width: 1280,
@@ -32,6 +31,9 @@ app.on('activate', () => {
         createWindow();
     }
 });
+
+
+  
 
 
 

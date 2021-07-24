@@ -2,7 +2,7 @@ var exec = require('child_process').execFile;
 
 var fun = function () {
     console.log("fun()");
-    exec('C:/dev/Desktop/Debug/Desktop.exe', function (err, data) {
+    exec('C:/Users/pesch/Desktop/FlowChart-App/dev/Desktop/Debug/Desktop.exe', function (err, data) {
       console.log(err)
       console.log(data.toString());
     });
@@ -26,7 +26,7 @@ function onFileSelected(event) {
     var blob = new Blob([e.target.result], {
       type: "text/plain;charset=utf-8"
     });
-    saveAs(blob, "C:/dev/Desktop/Desktop/data.txt");
+    saveAs(blob, "C:/Users/pesch/Desktop/FlowChart-App/dev/Desktop/Desktop/data.txt");
     console.log(blob)
 };
   reader.readAsText();
