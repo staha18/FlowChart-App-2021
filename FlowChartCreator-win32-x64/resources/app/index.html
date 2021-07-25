@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style/style_generation.css">
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/overcast/jquery-ui.css">
+</head>
+<body>
+  <header class="header">
+    <div class="menu-editor">
+      <div class="btn-menu-editor">
+        <button id="load-btn" class="text-btn-menu-editor">LOAD FILE</button>
+        <input id="file-input" type="file" name="name" style="display: none;" onchange="onFileSelected(event)" accept=".c, .cpp">
+      </div>
+      <div class="btn-menu-editor">
+        <button class="text-btn-menu-editor">SAVE FILE</button>
+      </div>
+      <div class="btn-menu-editor">
+        <input id="btn-gen" type="button" class="text-btn-menu-editor" value="GENERATION"/>
+      </div>
+    </div>
+    <div class="menu-graphic-editor">
+      <div class="dropdown">
+        <button class="dropbtn">FIGURE</button>
+        <div class="dropdown-content">
+          <a id="btn-rec" href="#">Rectangle</a>
+          <a id="btn-ellip" href="#">Ellipse</a>
+          <a id="btn-hex" href="#">Hexagon</a>
+          <a id="btn-romb" href="#">Romb</a>
+          <a id="btn-paral" href="#">Parallelogram</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">LINE</button>
+        <div class="dropdown-content">
+          <a id="btn-line" href="#">Line</a>
+          <a id="btn-arrow" href="#">Arrow</a>
+        </div>
+      </div>
+      <div class="btn-menu-graphic-editor">
+        <button class="text-btn-menu-graphic-editor" >TEXT</button>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="main-contain">
+      <div id="editor-container">
+        <textarea id="editor"></textarea>
+      </div>
+      <canvas id="canvas" width="640" height="800">
+      </canvas>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+  <script src="js/fabric.js"></script>
+  <script src="js/btn_generation_page.js"></script>
+  <script src="js/btn_script.js"></script>
+  <script src="js/render.js"></script>
+</body>
+</html>
