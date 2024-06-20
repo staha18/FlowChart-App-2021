@@ -1,0 +1,17 @@
+begin
+  Writeln('Введите длину катета a:');
+  Readln(a);
+  Writeln('Введите длину катета b:');
+  Readln(b);
+  Writeln('Введите длину катета k:');
+  Readln(k);
+  Writeln('Введите длину катета m:');
+  Readln(m);
+
+  if (a * b) = (k * m) then
+    Writeln('Площади прямоугольных треугольников равны.')
+  else
+    Writeln('Площади прямоугольных треугольников не равны.');
+
+  Readln;
+end.
